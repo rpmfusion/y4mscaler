@@ -1,12 +1,13 @@
 Name:           y4mscaler
 Version:        9.0
-Release:        6%{?dist}
+Release:        7%{?dist}
 Summary:        Video scaler which operates on YUV4MPEG2 streams
 
 Group:          Applications/Multimedia
 License:        GPLv2+
 URL:            http://www.mir.com/DMG/Software/
 Source0:        http://www.mir.com/DMG/Software/%{name}-%{version}-src.tgz
+Patch0:         y4mscaler-9.0-new-mjpegtools.patch
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
 BuildRequires:  mjpegtools-devel >= 1.6.3
@@ -20,6 +21,7 @@ output stream.
 
 %prep
 %setup -q
+%patch0 -p1
 
 
 %build
@@ -44,6 +46,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Sat Aug 16 2008 Hans de Goede <jwrdegoede@fedoraproject.org> 9.0-7
+- Fix build with new mjpegtools
+
 * Sat Aug 09 2008 Thorsten Leemhuis <fedora [AT] leemhuis [DOT] info - 9.0-6
 - rebuild
 
