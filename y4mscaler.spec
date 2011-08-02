@@ -1,6 +1,6 @@
 Name:           y4mscaler
 Version:        9.0
-Release:        8%{?dist}
+Release:        9%{?dist}
 Summary:        Video scaler which operates on YUV4MPEG2 streams
 
 Group:          Applications/Multimedia
@@ -46,6 +46,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Tue Aug  2 2011 Hans de Goede <j.w.r.degoede@gmail.com> - 9.0-9
+- Rebuild for new mjpegtools-2.0.0 (rf#1841)
+
 * Sun Mar 29 2009 Thorsten Leemhuis <fedora [AT] leemhuis [DOT] info> - 9.0-8
 - rebuild for new F11 features
 
