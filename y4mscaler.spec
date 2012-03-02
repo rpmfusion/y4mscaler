@@ -1,6 +1,6 @@
 Name:           y4mscaler
 Version:        9.0
-Release:        10%{?dist}
+Release:        11%{?dist}
 Summary:        Video scaler which operates on YUV4MPEG2 streams
 
 Group:          Applications/Multimedia
@@ -46,6 +46,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Fri Mar 02 2012 Nicolas Chauvet <kwizart@gmail.com> - 9.0-11
+- Rebuilt for c++ ABI breakage
+
 * Wed Jan 25 2012 Nicolas Chauvet <kwizart@gmail.com> - 9.0-10
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_17_Mass_Rebuild
 
